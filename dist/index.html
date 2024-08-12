@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="./script.js" defer></script>
+    
+</head>
+<body class="min-h-max bg-gradient-to-r from-black via-black to-amber-800 text-white">
+   <header class="bg-transparent text-white sticky top-0 z-[100]">
+    <section class="max-w-4xl mx-auto p-4 flex justify-between items-center">
+        <h1 class="text-5xl font-medium">
+            <img class="inline-flex w-14 h-14 rounded-full" src="../img/2.png" alt="Avatar">
+            <a href="#home">Portfolio</a>
+        </h1>
+        <div>
+            <button id="mobile-open-button" class="text-4xl sm:hidden cursor-pointer hover:text-orange-300">
+                &#9776;
+            </button>
+            <nav class="hidden sm:inline-block space-x-8 text-xl" aria-label="main">
+                <a href="#about" class="hover:opacity-90 hover:text-orange-700">ABOUT</a>
+                <a href="#skills" class="hover:opacity-90 hover:text-orange-700">SKILLS</a>
+                <a href="#projects" class="hover:opacity-90 hover:text-orange-700">PROJECTS</a>
+                <a href="#contacts" class="hover:opacity-90 hover:text-orange-700">CONTACT</a>
+            </nav>
+        </div>
+    </section>
+    <nav id="mobile-menu" class="hidden sm:hidden bg-black rounded-3xl border-4 border-orange-500" aria-label="mobile">
+        <a href="#about" class="block py-2 text-xl hover:opacity-90 hover:text-orange-700">ABOUT</a>
+        <a href="#skills" class="block py-2 text-xl hover:opacity-90 hover:text-orange-700">SKILLS</a>
+        <a href="#projects" class="block py-2 text-xl hover:opacity-90 hover:text-orange-700">PROJECTS</a>
+        <a href="#contacts" class="block py-2 text-xl hover:opacity-90 hover:text-orange-700">CONTACT</a>
+    </nav>
+        </section>
+    </header>
+    <main class="max-w-4xl mx-auto">
+        <section id="home" class="flex flex-col-reverse justify-center sm:flex-row p-6 items-center gap-8 mb-12">
+            <article class="sm:w-1/2">
+                <h2 class="max-w-md text-4xl font-bold text-center sm:text-5xl sm:text-left-slate-900 dark:text-white">
+                    I am Garret Jasper Lance Alegre, Hoping to be a frontend Developer.
+                </h2>
+                <p class="max-w-md text-2xl mt-4 text-center sm:text-pretty text-slate-400 dark:slate-400">
+                    I am an Intern student at UIP Incorporated.
+                </p>
+            </article>
+        </section>
+        <section id="about" class="flex flex-col-reverse justify-center sm:flex-row p-6 items-center gap-8 mb-12">
+            <article class="sm:w-1/2">
+                <h1 class="max-w-md text-4xl font-bold text-center sm:text-5xl sm:text-left-slate-900 dark:text-white">
+                    ABOUT ME
+                </h1>
+                <p class="max-w-screen-2xl text-xl mt-3 text-center sm:text-pretty text-slate-400 dark:slate-400">
+                    Hey! I'm a driven student at Cavite State University, deeply passionate about crafting cutting-edge web applications. 
+                delivering top-notch websites and apps that push boundaries. Let's innovate together and redefine the digital experience, one project at a time!
+                </p>
+            </article>
+            <img class="w-1/2 p-1 rounded-full border-orange-700 border-8 " src="../img/face.jpg" alt="Author">
+        </section>
+        <section id="timeline" class="p-6">
+            <div class="flex flex-col sm:flex-row m-4 relative">
+                <div class="bg-orange-800 w-0.5 h-6 opacity-60 sm:hidden"></div>
+                <div class="bg-orange-800 w-0.5 h-6 opacity-60 sm:hidden"></div>
+                <div class="hidden items-start w-44 pt-0.5 relative sm:flex">
+                    <div class="w-4/5 text-white-500" style="font-family: 'Poppins'; color: white;">2024-present</div>
+                    <div class="bg-orange-800 w-px h-full translate-x-5 translate-y-10 opacity-30"></div>
+                    <img src="../img/computer.svg" alt="icon" class="bg-orange-800 w-10 p-1 rounded-lg z-20">
+                    <div class="bg-orange-800 h-px w-8 translate-y-5 opacity-30"></div>
+                </div>
+                <div class="border border-gray-600 rounded-lg px-8 py-4 bg-gray-800 w-full text-center z-10 sm:w-96">
+                    <div class="text-xl" style="font-family: 'Poppins'; color: white;">Currently Pursuing Bachelor's in Computer Science</div>
+                    <div class="text-white-300 mb-6 sm:mb-8 sm:text-xs" style="font-family: 'Poppins'; color: white;">
+                        Cavite State University
+                        <span class="sm:hidden">| 2018-present</span>
+                    </div>
+                    <div class="mb-4 text-left" style="font-family: 'Poppins'; color: white;">
+                        Engaged in coursework and projects, seeking internships to enhance skills.
+                    </div>
+                    <img src="../img/computer.svg" alt="icon" class="bg-orange-800 w-8 p-1 rounded-lg z-20 absolute left-4 top-4 sm:hidden">
+                    <a class="bg-transparent text-white font-medium px-4 py-1 rounded-md mx-auto cursor-pointer" style="font-family: 'Poppins'; border: solid white 1px;">
+                        To be Continued
+                    </a>
+                </div>
+            </div>
+            <div class="flex flex-col sm:flex-row m-4 relative">
+                <div class="bg-orange-800 w-0.5 h-6 opacity-60 sm:hidden"></div>
+                <div class="bg-orange-800 w-0.5 h-6 opacity-60 sm:hidden"></div>
+                <div class="hidden items-start w-44 pt-0.5 relative sm:flex">
+                    <div class="w-4/5 text-white-500" style="font-family: 'Poppins'; color: white;">2020-past</div>
+                    <div class="bg-orange-800 w-px h-full translate-x-5 translate-y-10 opacity-30"></div>
+                    <img src="../img/graduate.svg" alt="icon" class="bg-orange-800 w-10 p-1 rounded-lg z-20">
+                    <div class="bg-orange-800 h-px w-8 translate-y-5 opacity-30"></div>
+                </div>
+                <div class="border border-gray-600 rounded-lg px-8 py-4 bg-gray-800 w-full text-center z-10 sm:w-96">
+                    <div class="text-xl" style="font-family: 'Poppins'; color: white;">Senior High School Graduate</div>
+                    <div class="text-white-300 mb-6 sm:mb-8 sm:text-xs" style="font-family: 'Poppins'; color: white;">
+                        Rogationist College
+                        <span class="sm:hidden">| 2020-past</span>
+                    </div>
+                    <div class="mb-4 text-left" style="font-family: 'Poppins'; color: white;">
+                        A graduate student of STEM strand focuses on Technology and Engineering.
+                    </div>
+                    <img src="../img/graduate.svg" alt="icon" class="bg-orange-800 w-8 p-1 rounded-lg z-20 absolute left-4 top-4 sm:hidden">
+                </div>
+            </div>
+            <div class="flex flex-col sm:flex-row m-4 relative">
+                <div class="bg-orange-800 w-0.5 h-6 opacity-60 sm:hidden"></div>
+                <div class="bg-orange-800 w-0.5 h-6 opacity-60 sm:hidden"></div>
+                <div class="hidden items-start w-44 pt-0.5 relative sm:flex">
+                    <div class="w-4/5 text-white-500" style="font-family: 'Poppins'; color: white;">2018-past</div>
+                    <div class="bg-orange-800 w-px h-full translate-x-5 translate-y-10 opacity-30"></div>
+                    <img src="../img/graduate.svg" alt="icon" class="bg-orange-800 w-10 p-1 rounded-lg z-20">
+                    <div class="bg-orange-800 h-px w-8 translate-y-5 opacity-30"></div>
+                </div>
+                <div class="border border-gray-600 rounded-lg px-8 py-4 bg-gray-800 w-full text-center z-10 sm:w-96">
+                    <div class="text-xl" style="font-family: 'Poppins'; color: white;">Junior High School Graduate</div>
+                    <div class="text-white-300 mb-6 sm:mb-8 sm:text-xs" style="font-family: 'Poppins'; color: white;">
+                        Malabag National High School
+                        <span class="sm:hidden">| 2020-past</span>
+                    </div>
+                    <div class="mb-4 text-left" style="font-family: 'Poppins'; color: white;">
+                        A graduate student, performing and honor student.
+                    </div>
+                    <img src="../img/graduate.svg" alt="icon" class="bg-orange-800 w-8 p-1 rounded-lg z-20 absolute left-4 top-4 sm:hidden">
+                </div>
+            </div>
+        </section>     
+        <section id="skills" class="flex flex-col-reverse justify-center sm:flex-row p-6 items-center gap-8 mb-12">
+            <article class="sm:w-1/2">
+                <h1 class="max-w-xl text-4xl font-bold text-center sm:text-5xl sm:text-center text-slate-900 dark:text-white">
+                    TECHNICAL SKILLS
+                </h1>
+                <p class="max-w-screen-2xl text-xl mt-0.5 text-center sm:text-center text-slate-400 dark:text-slate-400 text-pretty">
+                    These are my tech stack. Some of them are familiar and I am not proficient in using them.
+                </p>
+            </article>
+        </section>
+
+<section id="skills">
+    <div class="space-y-5">
+
+        <div class="bg-orange-800 w-px h-full translate-x-5 translate-y-10 opacity-30"></div>
+            <img src="../img/java.svg" alt="icon" class="bg-orange-800 w-10 p-1 rounded-lg z-20">
+                 <div class="bg-orange-800 h-px w-8 translate-y-5 opacity-30"></div>
+                    <div class="flex w-full h-5 bg-gray-200 rounded-full overflow-hidden dark:bg-neutral-700" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                         <div class="flex flex-col justify-center rounded-full overflow-hidden bg-orange-600 text-xs text-white text-center whitespace-nowrap dark:bg-orange-700 transition duration-500" style="width: 35%">35%</div>
+        </div>
+
+        <div class="bg-orange-800 w-px h-full translate-x-5 translate-y-10 opacity-30"></div>
+             <img src="../img/html.svg" alt="icon" class="bg-orange-800 w-10 p-1 rounded-lg z-20">
+                <div class="bg-orange-800 h-px w-8 translate-y-5 opacity-30"></div>
+                        <div class="flex w-full h-5 bg-gray-200 rounded-full overflow-hidden dark:bg-neutral-700" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+                    <div class="flex flex-col justify-center rounded-full overflow-hidden bg-orange-600 text-xs text-white text-center whitespace-nowrap dark:bg-orange-700 transition duration-500" style="width: 50%">50%</div>
+        </div>
+
+        <div class="bg-orange-800 w-px h-full translate-x-5 translate-y-10 opacity-30"></div>
+            <img src="../img/c++.svg" alt="icon" class="bg-orange-800 w-10 p-1 rounded-lg z-20">
+                <div class="bg-orange-800 h-px w-8 translate-y-5 opacity-30"></div>
+                  <div class="flex w-full h-5 bg-gray-200 rounded-full overflow-hidden dark:bg-neutral-700" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                    <div class="flex flex-col justify-center rounded-full overflow-hidden bg-orange-600 text-xs text-white text-center whitespace-nowrap dark:bg-orange-700 transition duration-500" style="width: 40%">40%</div>
+        </div>
+        
+        <div class="bg-orange-800 w-px h-full translate-x-5 translate-y-10 opacity-30"></div>
+            <img src="../img/css.svg" alt="icon" class="bg-orange-800 w-10 p-1 rounded-lg z-20">
+                 <div class="bg-orange-800 h-px w-8 translate-y-5 opacity-30"></div>
+                    <div class="flex w-full h-5 bg-gray-200 rounded-full overflow-hidden dark:bg-neutral-700" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                        <div class="flex flex-col justify-center rounded-full overflow-hidden bg-orange-600 text-xs text-white text-center whitespace-nowrap dark:bg-orange-700 transition duration-500" style="width: 50%">50%</div>
+        </div>
+ 
+      </div>
+</section>
+<section id="projects" class="flex flex-col-reverse justify-center sm:flex-row p-6 items-center gap-8 mb-12 mt-12"> 
+    <article class="sm:w-1/2">
+        <h1 class="max-w-xl text-4xl font-bold text-center sm:text-5xl sm:text-left-slate-900 dark:text-white">
+             PROJECTS
+        </h1>
+        <p class="max-w-screen-2xl text-xl mt-.5 text-center sm:text-pretty text-slate-400 dark:slate-400">
+            This are my accomplish projects, I'm looking forward to add new projects and designs.
+        </p>
+    </article>
+</section>
+<section id="projects" class="projects-container">
+    <div class="border rounded-xl shadow-sm divide-y overflow-hidden sm:flex sm:divide-y-0 sm:divide-x dark:border-neutral-700 dark:shadow-neutral-700/70 dark:divide-neutral-600 gap-x-3">
+        <div class="flex flex-col flex-[1_0_0%] bg-white dark:bg-neutral-800">
+            <img class="w-full h-auto rounded-t-xl sm:rounded-se-none" src="../img/water-r.png" alt="Card Image">
+            <div class="p-4 flex-1 md:p-5">
+                <h3 class="text-lg font-bold text-gray-800 dark:text-white">Water Refiling System</h3>
+                <p class="mt-1 text-gray-500 dark:text-neutral-400">
+                    These systems ensure the removal of contaminants, making water safe and clean for consumption.
+                </p>
+            </div>
+            <div class="p-4 border-t sm:px-5 dark:border-neutral-700">
+                <p class="text-xs text-gray-500 dark:text-neutral-500">2023-2024</p>
+            </div>
+        </div>
+        <div class="flex flex-col flex-[1_0_0%] bg-white dark:bg-neutral-800">
+            <img class="w-full h-auto" src="../img/pos.jpg" alt="Card Image">
+            <div class="p-4 flex-1 md:p-5">
+                <h3 class="text-lg font-bold text-gray-800 dark:text-white">Point of Sale</h3>
+                <p class="mt-1 text-gray-500 dark:text-neutral-400">
+                    Develop Point of Sale System for Order and Payment processing, The Restaurant and the client have streamline order taking, Billing and payment transaction.
+                </p>
+            </div>
+            <div class="p-4 border-t sm:px-5 dark:border-neutral-700">
+                <p class="text-xs text-gray-500 dark:text-neutral-500">2023</p>
+            </div>
+        </div>
+        <div class="flex flex-col flex-[1_0_0%] bg-white dark:bg-neutral-800">
+            <img class="w-full h-auto sm:rounded-se-xl" src="../img/game.png" alt="Card Image">
+            <div class="p-4 flex-1 md:p-5">
+                <h3 class="text-lg font-bold text-gray-800 dark:text-white">Putok Patrol</h3>
+                <p class="mt-1 text-gray-500 dark:text-neutral-400">
+                    This game was developed and inspired by minimilitia and bomb squad, this game aims to provide entertainment by playing competitve with strategic plan.
+                </p>
+            </div>
+            <div class="p-4 border-t sm:px-5 dark:border-neutral-700">
+                <p class="text-xs text-gray-500 dark:text-neutral-500">2024</p>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="contacts" class="flex flex-col-reverse justify-center sm:flex-row p-6 items-center gap-8 mb-12">
+    <article class="sm:w-1/2">
+        <h1 class="max-w-xl mt-14 text-4xl font-bold text-center sm:text-5xl sm:text-left-slate-900 dark:text-white">
+             Contact Me
+        </h1>
+        <p class="max-w-screen-xl text-xl mt-.5 text-center sm:text-pretty text-slate-400 dark:slate-400">
+             I would be delighted to connect with you. Please feel free to reach out to me through the following platforms:
+        </p>
+    </article>
+</section>
+<section class="max-w-screen-2xl mx-auto p-[-20] flex justify-center items-start space-x-1">
+<button type="button1" onclick="location.href='https://www.facebook.com/gartgetget/'" class="py-1 px-2 flex justify-center items-center size-[65px] text-2xl font-medium rounded-lg border border-transparent bg-orange-700 text-white hover:bg-black focus:outline-black focus:bg-orange-700 disabled:opacity-50 disabled:pointer-events-none">
+    <img src="../img/facebook.svg" alt="icon" class=" colorwidth="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="m5 11 4-7"></path>
+        <path d="m19 11-4-7"></path>
+             <path d="M2 11h20"></path>
+                <path d="m3.5 11 1.6 7.4a2 2 0 0 0 2 1.6h9.8c.9 0 1.8-.7 2-1.6l1.7-7.4"></path>
+                    <path d="m9 11 1 9"></path>
+                        <path d="M4.5 15.5h15"></path>
+                        <path d="m15 11-1 9"></path>
+    </svg>
+    <button type="button2" onclick="location.href='https://www.linkedin.com/in/garret-jasper-lance-alegre-07b708316/'" class="py-1 px-2 flex justify-center items-center size-[65px] text-2xl font-medium rounded-lg border border-transparent bg-orange-800 text-white hover:bg-black focus:outline-black focus:bg-orange-700 disabled:opacity-50 disabled:pointer-events-none">
+        <img src="../img/lkd.svg" alt="icon" class=" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="m5 11 4-7"></path>
+            <path d="m19 11-4-7"></path>
+                 <path d="M2 11h20"></path>
+                    <path d="m3.5 11 1.6 7.4a2 2 0 0 0 2 1.6h9.8c.9 0 1.8-.7 2-1.6l1.7-7.4"></path>
+                        <path d="m9 11 1 9"></path>
+                            <path d="M4.5 15.5h15"></path>
+                                <path d="m15 11-1 9"></path>
+        </svg>
+      </button>
+      <button type="button3" onclick="location.href='https://www.instagram.com/garretalegre1111/?hl=en'" class="py-1 px-2 flex justify-center items-center size-[65px] text-2xl font-medium rounded-lg border border-transparent bg-orange-900 text-white hover:bg-black focus:outline-black focus:bg-orange-700 disabled:opacity-50 disabled:pointer-events-none">
+        <img src="../img/ig.svg" alt="icon" class=" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="m5 11 4-7"></path>
+            <path d="m19 11-4-7"></path>
+                 <path d="M2 11h20"></path>
+                    <path d="m3.5 11 1.6 7.4a2 2 0 0 0 2 1.6h9.8c.9 0 1.8-.7 2-1.6l1.7-7.4"></path>
+                        <path d="m9 11 1 9"></path>
+                            <path d="M4.5 15.5h15"></path>
+                                <path d="m15 11-1 9"></path>
+        </svg>
+</section>
+<section id="contacts" class="flex flex-col-reverse justify-center sm:flex-row p-6 items-center gap-8 mb-12">
+    <article class="sm:w-1/2">
+        <p class="max-w-screen-2xl text-xl mt-.5 text-center sm:text-pretty text-slate-400 dark:slate-400">
+            Once again, I extend my deepest appreciation for your time and consideration. I look forward to the possibility of collaborating with you in the future. Thank you!
+    </article>
+</section>
+<footer class="w-full max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="py-6 border-t border-gray-200">
+      <div class="flex flex-wrap justify-between items-center gap-2">
+        <div>
+          <p class="text-xs text-gray-600">
+            © garretcotoner08@gmail.com
+          </p>
+        </div>
+        <ul class="flex flex-wrap items-center">
+          <li class="inline-block relative pe-4 text-xs last:pe-0 last-of-type:before:hidden before:absolute before:top-1/2 before:end-1.5 before:-translate-y-1/2 before:size-[3px] before:rounded-full before:bg-gray-400">
+            <a class="text-xs text-gray-500 underline hover:text-gray-800 hover:decoration-2 focus:outline-none focus:decoration-2" href="#">
+              Facebook
+            </a>
+          </li>
+          <li class="inline-block relative pe-4 text-xs last:pe-0 last-of-type:before:hidden before:absolute before:top-1/2 before:end-1.5 before:-translate-y-1/2 before:size-[3px] before:rounded-full before:bg-gray-400">
+            <a class="text-xs text-gray-500 underline hover:text-gray-800 hover:decoration-2 focus:outline-none focus:decoration-2" href="#">
+              linkedIn
+            </a>
+          </li>
+          <li class="inline-block pe-4 text-xs">
+            <a class="text-xs text-gray-500 underline hover:text-gray-800 hover:decoration-2 focus:outline-none focus:decoration-2" href="#">
+              Instagram
+            </a>
+          </li>
+          <li class="inline-block">
+
+        </ul>
+       
+      </div>
+    </div>
+  </footer>
+    </main>  
+</body>
+</html>
