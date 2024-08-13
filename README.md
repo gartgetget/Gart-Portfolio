@@ -1,2 +1,2 @@
 # Gart-Portfolio
-Created using HTML-Tailwind CSS-Vanilla JS
+Created using HTML, Tailwind CSS, Vanilla Java Script, NodeJS
