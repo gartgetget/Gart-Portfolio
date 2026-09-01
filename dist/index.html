@@ -27,18 +27,52 @@
                 <a href="#contacts" class="nav-link">Contact</a>
                 <a href="#contacts" class="glass-card px-5 py-2 rounded-full bg-orange-600 hover:bg-orange-500 text-white font-semibold transition">Hire Me</a>
             </div>
-            <button id="mobile-open-button" class="text-4xl md:hidden cursor-pointer hover:text-orange-400">
-                &#9776;
+            <button id="mobile-open-button" class="hamburger-btn md:hidden" aria-label="Toggle menu">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
             </button>
         </nav>
-        <div id="mobile-menu" class="hidden md:hidden bg-zinc-900/95 backdrop-blur rounded-b-3xl border-t border-orange-700/40 px-6 py-4 space-y-3 text-xl font-medium">
-            <a href="#about" class="block hover:text-orange-400 nav-link">About</a>
-            <a href="#timeline" class="block hover:text-orange-400 nav-link">Timeline</a>
-            <a href="#skills" class="block hover:text-orange-400 nav-link">Skills</a>
-            <a href="#projects" class="block hover:text-orange-400 nav-link">Projects</a>
-            <a href="#contacts" class="block hover:text-orange-400 nav-link">Contact</a>
-        </div>
     </header>
+
+    <!-- Mobile slide-in menu overlay -->
+    <div id="mobile-menu-backdrop" class="mobile-backdrop hidden"></div>
+    <div id="mobile-menu" class="mobile-slide-panel hidden">
+        <div class="mobile-slide-header">
+            <a href="#home" class="flex items-center gap-3 mb-2" id="mobile-menu-logo">
+                <img class="w-10 h-10 rounded-full border-2 border-orange-600 object-cover" src="img/2.png" alt="Avatar">
+                <span class="text-xl font-bold tracking-tight text-white">Gart<span class="text-orange-500">.</span></span>
+            </a>
+            <button id="mobile-close-button" class="mobile-close-btn" aria-label="Close menu">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+            </button>
+        </div>
+        <nav class="mobile-slide-nav">
+            <a href="#about" class="mobile-slide-link">
+                <svg class="mobile-link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                <span>About</span>
+            </a>
+            <a href="#timeline" class="mobile-slide-link">
+                <svg class="mobile-link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                <span>Timeline</span>
+            </a>
+            <a href="#skills" class="mobile-slide-link">
+                <svg class="mobile-link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                <span>Skills</span>
+            </a>
+            <a href="#projects" class="mobile-slide-link">
+                <svg class="mobile-link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+                <span>Projects</span>
+            </a>
+            <a href="#contacts" class="mobile-slide-link">
+                <svg class="mobile-link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                <span>Contact</span>
+            </a>
+        </nav>
+        <div class="mobile-slide-footer">
+            <a href="#contacts" class="mobile-hire-btn">Hire Me</a>
+        </div>
+    </div>
 
     <!-- ================= HERO ================= -->
     <section id="home" class="relative flex items-center justify-center min-h-[85vh] px-6 overflow-hidden">

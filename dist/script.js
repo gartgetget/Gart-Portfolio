@@ -1,7 +1,58 @@
-document.getElementById('mobile-open-button').addEventListener('click', function() {
+(function() {
+    var openBtn = document.getElementById('mobile-open-button');
+    var closeBtn = document.getElementById('mobile-close-button');
     var mobileMenu = document.getElementById('mobile-menu');
-    mobileMenu.classList.toggle('hidden');
-});
+    var mobileBackdrop = document.getElementById('mobile-menu-backdrop');
+
+    function openMenu() {
+        mobileMenu.classList.remove('hidden');
+        mobileBackdrop.classList.remove('hidden');
+        // Force reflow then add visible classes for transitions
+        void mobileMenu.offsetWidth;
+        mobileMenu.classList.add('visible');
+        mobileBackdrop.classList.add('visible');
+        openBtn.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeMenu() {
+        mobileMenu.classList.remove('visible');
+        mobileBackdrop.classList.remove('visible');
+        openBtn.classList.remove('active');
+        document.body.style.overflow = '';
+        setTimeout(function() {
+            mobileMenu.classList.add('hidden');
+            mobileBackdrop.classList.add('hidden');
+        }, 400);
+    }
+
+    if (openBtn) {
+        openBtn.addEventListener('click', function() {
+            if (mobileMenu.classList.contains('visible')) {
+                closeMenu();
+            } else {
+                openMenu();
+            }
+        });
+    }
+    if (closeBtn) {
+        closeBtn.addEventListener('click', closeMenu);
+    }
+    if (mobileBackdrop) {
+        mobileBackdrop.addEventListener('click', closeMenu);
+    }
+
+    // Close menu when a nav link is clicked
+    var mobileLinks = document.querySelectorAll('.mobile-slide-link, #mobile-menu-logo, .mobile-hire-btn');
+    mobileLinks.forEach(function(link) {
+        link.addEventListener('click', closeMenu);
+    });
+
+    // Close menu with Escape key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') closeMenu();
+    });
+})();
 
 (function() {
     var floatingId = document.getElementById('floating-id');
