@@ -135,6 +135,21 @@ nav .nav-link {
   transform: scale(1.06);
 }
 
+/* skill icon */
+.skill-icon {
+  filter: drop-shadow(0 0 6px rgba(245, 158, 11, 0.55)) drop-shadow(0 0 18px rgba(245, 158, 11, 0.35));
+  animation: skill-glow 2.6s ease-in-out infinite;
+}
+
+@keyframes skill-glow {
+  0%, 100% {
+    filter: drop-shadow(0 0 5px rgba(245, 158, 11, 0.5)) drop-shadow(0 0 14px rgba(245, 158, 11, 0.3));
+  }
+  50% {
+    filter: drop-shadow(0 0 10px rgba(245, 158, 11, 0.8)) drop-shadow(0 0 26px rgba(245, 158, 11, 0.55));
+  }
+}
+
 /* skill card */
 .skill-card {
   border: 1px solid rgba(255, 255, 255, 0.2);
