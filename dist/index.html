@@ -3,14 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Garret Alegre | Portfolio</title>
+    <title>Garret Alegre | Frontend Developer Portfolio</title>
+    <meta name="description" content="Portfolio of Garret Jasper Lance Alegre - Frontend Developer, Graphic Designer, and Computer Science graduate from Cavite State University.">
+    <meta name="keywords" content="Garret Alegre, Frontend Developer, Web Developer, Portfolio, React, JavaScript">
+    <meta name="author" content="Garret Jasper Lance Alegre">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Garret Alegre | Frontend Developer Portfolio">
+    <meta property="og:description" content="Frontend Developer, Graphic Designer, and Computer Science graduate crafting modern web experiences.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://gart-portfolio.vercel.app/">
+    <meta property="og:image" content="img/face.jpg">
+    <meta property="og:site_name" content="Garret Alegre Portfolio">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Garret Alegre | Frontend Developer Portfolio">
+    <meta name="twitter:description" content="Frontend Developer, Graphic Designer, and Computer Science graduate.">
+    <meta name="twitter:image" content="img/face.jpg">
     <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.0.3/src/regular/style.css">
     <link rel="stylesheet" href="style.css">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Garret Jasper Lance Alegre",
+        "url": "https://gart-portfolio.vercel.app/",
+        "jobTitle": "Frontend Developer",
+        "alumniOf": {"@type": "CollegeOrUniversity", "name": "Cavite State University"},
+        "knowsAbout": ["HTML","CSS","JavaScript","React","Tailwind CSS","Git","Figma","Node.js"],
+        "sameAs": ["https://www.facebook.com/gartgetget/","https://www.linkedin.com/in/garret-jasper-lance-alegre-07b708316/","https://www.instagram.com/garretalegre1111/"]
+    }
+    </script>
     <script src="./script.js" defer></script>
 </head>
 <body class="min-h-full body-bg text-white antialiased">
+
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="loader-content">
+            <div class="loader-logo">Gart<span>.</span></div>
+            <div class="loader-bar"><div class="loader-bar-fill"></div></div>
+        </div>
+    </div>
+
+    <!-- Scroll Progress -->
+    <div id="scroll-progress"></div>
 
     <!-- ================= HEADER ================= -->
     <header id="site-header" class="main-header text-white sticky top-0 z-[100]">
@@ -22,16 +61,19 @@
             <div class="hidden md:flex items-center gap-8 text-lg font-medium">
                 <a href="#about" class="nav-link">About</a>
                 <a href="#timeline" class="nav-link">Timeline</a>
+                <a href="#experience" class="nav-link">Experience</a>
                 <a href="#skills" class="nav-link">Skills</a>
                 <a href="#projects" class="nav-link">Projects</a>
                 <a href="#contacts" class="nav-link">Contact</a>
                 <a href="#contacts" class="glass-card px-5 py-2 rounded-full bg-orange-600 hover:bg-orange-500 text-white font-semibold transition">Hire Me</a>
             </div>
-            <button id="mobile-open-button" class="hamburger-btn md:hidden" aria-label="Toggle menu">
-                <span class="hamburger-line"></span>
-                <span class="hamburger-line"></span>
-                <span class="hamburger-line"></span>
-            </button>
+            <div class="flex items-center gap-3 md:hidden">
+                <button id="mobile-open-button" class="hamburger-btn" aria-label="Toggle menu">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+            </div>
         </nav>
     </header>
 
@@ -49,23 +91,27 @@
         </div>
         <nav class="mobile-slide-nav">
             <a href="#about" class="mobile-slide-link">
-                <svg class="mobile-link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                <i class="ph ph-user mobile-link-icon"></i>
                 <span>About</span>
             </a>
             <a href="#timeline" class="mobile-slide-link">
-                <svg class="mobile-link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                <i class="ph ph-clock mobile-link-icon"></i>
                 <span>Timeline</span>
             </a>
+            <a href="#experience" class="mobile-slide-link">
+                <i class="ph ph-briefcase mobile-link-icon"></i>
+                <span>Experience</span>
+            </a>
             <a href="#skills" class="mobile-slide-link">
-                <svg class="mobile-link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                <i class="ph ph-code mobile-link-icon"></i>
                 <span>Skills</span>
             </a>
             <a href="#projects" class="mobile-slide-link">
-                <svg class="mobile-link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+                <i class="ph ph-folder mobile-link-icon"></i>
                 <span>Projects</span>
             </a>
             <a href="#contacts" class="mobile-slide-link">
-                <svg class="mobile-link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                <i class="ph ph-envelope mobile-link-icon"></i>
                 <span>Contact</span>
             </a>
         </nav>
@@ -83,8 +129,8 @@
                 Garret Jasper<br>
                 <span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-amber-400">Lance Alegre</span>
             </h1>
-            <p class="text-xl md:text-2xl text-slate-300 mb-3">Hoping to be a <span class="text-orange-400 font-semibold">Frontend Developer</span></p>
-            <p class="text-slate-400 text-lg mb-8 max-w-xl mx-auto text-white">A graduate at Cavite State University. Passionate about crafting clean, modern web experiences.</p>
+            <p class="text-xl md:text-2xl text-slate-300 mb-3">Hoping to be a <span class="text-orange-400 font-semibold" id="typed-text"></span><span class="typed-cursor">|</span></p>
+            <p class="text-slate-400 text-lg mb-8 max-w-xl mx-auto">A graduate at Cavite State University. Passionate about crafting clean, modern web experiences.</p>
             <div class="flex flex-wrap justify-center gap-4">
                 <a href="#projects" class="glass-card px-7 py-3 rounded-full bg-gradient-to-r from-orange-600 to-amber-600 font-semibold hover:shadow-lg hover:shadow-orange-600/40">View Projects</a>
                 <a href="#contacts" class="glass-card px-7 py-3 rounded-full border-2 border-orange-600 font-semibold hover:bg-orange-600/20">Contact Me</a>
@@ -96,13 +142,13 @@
     <section id="about" class="flex flex-col md:flex-row items-center gap-10 px-6 py-20 max-w-6xl mx-auto">
         <div class="reveal w-full md:w-2/5 flex justify-center relative">
             <div class="absolute -inset-4 rounded-full bg-gradient-to-tr from-orange-700/40 to-transparent blur-2xl"></div>
-            <img class="relative w-64 h-64 md:w-80 md:h-80 rounded-full object-cover border-8 border-orange-700 shadow-2xl" src="img/face.jpg" alt="Garret Alegre">
+            <img class="relative w-64 h-64 md:w-80 md:h-80 rounded-full object-cover border-8 border-orange-700 shadow-2xl" src="img/face.jpg" alt="Garret Alegre" loading="lazy">
         </div>
         <div class="reveal md:w-3/5 text-center md:text-left">
             <p class="text-orange-400 font-semibold tracking-widest uppercase text-sm mb-2">About Me</p>
             <h1 class="text-4xl font-extrabold mb-6">Turning ideas into <span class="text-orange-400">digital reality</span></h1>
             <p class="text-slate-300 text-lg leading-relaxed mb-4">
-                Hey! I'm a driven student at Cavite State University, deeply passionate about crafting cutting-edge web applications.
+                Hey! I'm a driven graduate from Cavite State University, deeply passionate about crafting cutting-edge web applications.
             </p>
             <p class="text-slate-400 text-lg leading-relaxed">
                 I deliver top-notch websites and apps that push boundaries. Let's innovate together and redefine the digital experience, one project at a time!
@@ -125,7 +171,7 @@
     </section>
 
     <!-- ================= TIMELINE ================= -->
-    <section id="timeline" class="px-6 py-20 bg-black/40">
+    <section id="timeline" class="px-6 py-20 section-alt">
         <div class="max-w-4xl mx-auto">
             <div class="text-center mb-14 reveal">
                 <p class="text-orange-400 font-semibold tracking-widest uppercase text-sm mb-2">My Journey</p>
@@ -137,7 +183,7 @@
                     <span class="tl-node"></span>
                     <div class="md:w-1/2 md:pr-10">
                         <div class="timeline-card p-6">
-                            <div class="tl-badge"><img src="img/graduate.svg" alt="Graduate"></div>
+                            <div class="tl-badge"><i class="ph ph-graduation-cap" style="font-size:26px;color:white;"></i></div>
                             <span class="tl-year">2025 - Graduate</span>
                             <h3 class="text-xl font-bold mb-1">Bachelor's in Computer Science</h3>
                             <p class="text-slate-400 mb-3">Cavite State University</p>
@@ -150,7 +196,7 @@
                     <span class="tl-node"></span>
                     <div class="md:w-1/2 md:pl-10">
                         <div class="timeline-card p-6">
-                            <div class="tl-badge"><img src="img/computer.svg" alt="STEM"></div>
+                            <div class="tl-badge"><i class="ph ph-desktop" style="font-size:26px;color:white;"></i></div>
                             <span class="tl-year">2020 - past</span>
                             <h3 class="text-xl font-bold mb-1">Senior High School Graduate</h3>
                             <p class="text-slate-400 mb-3">Rogationist College</p>
@@ -163,7 +209,7 @@
                     <span class="tl-node"></span>
                     <div class="md:w-1/2 md:pr-10">
                         <div class="timeline-card p-6">
-                            <div class="tl-badge"><img src="img/graduate.svg" alt="Honor Student"></div>
+                            <div class="tl-badge"><i class="ph ph-graduation-cap" style="font-size:26px;color:white;"></i></div>
                             <span class="tl-year">2018 - past</span>
                             <h3 class="text-xl font-bold mb-1">Junior High School Graduate</h3>
                             <p class="text-slate-400 mb-3">Malabag National High School</p>
@@ -175,42 +221,156 @@
         </div>
     </section>
 
-    <!-- ================= SKILLS ================= -->
-    <section id="skills" class="px-6 py-20 max-w-5xl mx-auto">
+    <!-- ================= EXPERIENCE ================= -->
+    <section id="experience" class="px-6 py-20 max-w-5xl mx-auto">
         <div class="text-center mb-14 reveal">
-            <p class="text-orange-400 font-semibold tracking-widest uppercase text-sm mb-2">What I know</p>
-            <h1 class="section-heading text-4xl font-extrabold">Technical Skills</h1>
-            <p class="text-slate-400 text-lg mt-3">My tech stack. Some are familiar, some I'm still improving.</p>
+            <p class="text-orange-400 font-semibold tracking-widest uppercase text-sm mb-2">Where I've Worked</p>
+            <h1 class="section-heading text-4xl font-extrabold">Experience</h1>
         </div>
 
-        <div class="grid grid-cols-2 sm:grid-cols-4 gap-8 justify-items-center reveal">
-            <div class="skill-card h-[135px] w-[135px] rounded-xl backdrop-blur-xl bg-white/15 flex flex-col justify-center items-center gap-3">
-                <div class="skill-icon h-[60px] w-[60px] flex justify-center items-center">
-                    <img src="img/html.svg" width="60" height="60" alt="HTML" />
+        <div class="grid md:grid-cols-2 gap-8">
+            <div class="reveal experience-card glass-card rounded-2xl p-8 bg-zinc-900/70">
+                <div class="flex items-center gap-4 mb-4">
+                    <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-orange-600 to-amber-600 flex items-center justify-center">
+                        <i class="ph ph-palette text-white" style="font-size:24px;"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold">Graphic Designer</h3>
+                        <p class="text-orange-400 text-sm font-semibold">5A Company</p>
+                    </div>
                 </div>
-                <p class="text-orange-300 font-semibold">HTML</p>
+                <p class="text-slate-400 leading-relaxed mb-4">Created visual designs, marketing materials, and brand assets for company projects. Collaborated with development teams to ensure design consistency.</p>
+                <div class="flex flex-wrap gap-2">
+                    <span class="exp-tag">Photoshop</span>
+                    <span class="exp-tag">Illustrator</span>
+                    <span class="exp-tag">Branding</span>
+                </div>
             </div>
 
-            <div class="skill-card h-[135px] w-[135px] rounded-xl backdrop-blur-xl bg-white/15 flex flex-col justify-center items-center gap-3">
-                <div class="skill-icon h-[60px] w-[60px] flex justify-center items-center">
-                    <img src="img/css.svg" width="60" height="60" alt="CSS" />
+            <div class="reveal experience-card glass-card rounded-2xl p-8 bg-zinc-900/70">
+                <div class="flex items-center gap-4 mb-4">
+                    <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-orange-600 to-amber-600 flex items-center justify-center">
+                        <i class="ph ph-code text-white" style="font-size:24px;"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold">Web Developer</h3>
+                        <p class="text-orange-400 text-sm font-semibold">Luvtech</p>
+                    </div>
                 </div>
-                <p class="text-orange-300 font-semibold">CSS</p>
+                <p class="text-slate-400 leading-relaxed mb-4">Developed responsive web applications using modern frameworks. Focused on frontend implementation and user interface optimization.</p>
+                <div class="flex flex-wrap gap-2">
+                    <span class="exp-tag">React</span>
+                    <span class="exp-tag">JavaScript</span>
+                    <span class="exp-tag">Tailwind CSS</span>
+                </div>
             </div>
 
-            <div class="skill-card h-[135px] w-[135px] rounded-xl backdrop-blur-xl bg-white/15 flex flex-col justify-center items-center gap-3">
-                <div class="skill-icon h-[60px] w-[60px] flex justify-center items-center">
-                    <img src="img/react.svg" width="60" height="60" alt="React" />
+            <div class="reveal experience-card glass-card rounded-2xl p-8 bg-zinc-900/70">
+                <div class="flex items-center gap-4 mb-4">
+                    <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-orange-600 to-amber-600 flex items-center justify-center">
+                        <i class="ph ph-lightbulb text-white" style="font-size:24px;"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold">Frontend Developer</h3>
+                        <p class="text-orange-400 text-sm font-semibold">Freelance</p>
+                    </div>
                 </div>
-                <p class="text-orange-300 font-semibold">React</p>
+                <p class="text-slate-400 leading-relaxed mb-4">Built custom web solutions for clients including solar energy calculators and inventory management systems. Delivered end-to-end frontend development.</p>
+                <div class="flex flex-wrap gap-2">
+                    <span class="exp-tag">HTML/CSS</span>
+                    <span class="exp-tag">JavaScript</span>
+                    <span class="exp-tag">React</span>
+                </div>
             </div>
 
-            <div class="skill-card h-[135px] w-[135px] rounded-xl backdrop-blur-xl bg-white/15 flex flex-col justify-center items-center gap-3">
-                <div class="skill-icon h-[60px] w-[60px] flex justify-center items-center">
-                    <img src="img/javascript.svg" width="60" height="60" alt="JavaScript" />
+            <div class="reveal experience-card glass-card rounded-2xl p-8 bg-zinc-900/70">
+                <div class="flex items-center gap-4 mb-4">
+                    <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-orange-600 to-amber-600 flex items-center justify-center">
+                        <i class="ph ph-puzzle-piece text-white" style="font-size:24px;"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold">Game Developer</h3>
+                        <p class="text-orange-400 text-sm font-semibold">Personal Project</p>
+                    </div>
                 </div>
-                <p class="text-orange-300 font-semibold">JavaScript</p>
+                <p class="text-slate-400 leading-relaxed mb-4">Designed and developed Putok Patrol, a competitive multiplayer game inspired by classic side-scrollers. Built game mechanics and UI systems.</p>
+                <div class="flex flex-wrap gap-2">
+                    <span class="exp-tag">Game Design</span>
+                    <span class="exp-tag">Unity</span>
+                    <span class="exp-tag">C#</span>
+                </div>
             </div>
+        </div>
+    </section>
+
+    <!-- ================= SKILLS ================= -->
+    <section id="skills" class="px-6 py-20 section-alt">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center mb-14 reveal">
+                <p class="text-orange-400 font-semibold tracking-widest uppercase text-sm mb-2">What I know</p>
+                <h1 class="section-heading text-4xl font-extrabold">Technical Skills</h1>
+                <p class="text-slate-400 text-lg mt-3">My tech stack. Some are familiar, some I'm still improving.</p>
+            </div>
+
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-8 justify-items-center reveal">
+                <div class="skill-card h-[135px] w-[135px] rounded-xl backdrop-blur-xl bg-white/15 flex flex-col justify-center items-center gap-3">
+                    <div class="skill-icon h-[60px] w-[60px] flex justify-center items-center">
+                        <img src="img/html.svg" width="60" height="60" alt="HTML" loading="lazy">
+                    </div>
+                    <p class="text-orange-300 font-semibold">HTML</p>
+                </div>
+
+                <div class="skill-card h-[135px] w-[135px] rounded-xl backdrop-blur-xl bg-white/15 flex flex-col justify-center items-center gap-3">
+                    <div class="skill-icon h-[60px] w-[60px] flex justify-center items-center">
+                        <img src="img/css.svg" width="60" height="60" alt="CSS" loading="lazy">
+                    </div>
+                    <p class="text-orange-300 font-semibold">CSS</p>
+                </div>
+
+                <div class="skill-card h-[135px] w-[135px] rounded-xl backdrop-blur-xl bg-white/15 flex flex-col justify-center items-center gap-3">
+                    <div class="skill-icon h-[60px] w-[60px] flex justify-center items-center">
+                        <img src="img/react.svg" width="60" height="60" alt="React" loading="lazy">
+                    </div>
+                    <p class="text-orange-300 font-semibold">React</p>
+                </div>
+
+                <div class="skill-card h-[135px] w-[135px] rounded-xl backdrop-blur-xl bg-white/15 flex flex-col justify-center items-center gap-3">
+                    <div class="skill-icon h-[60px] w-[60px] flex justify-center items-center">
+                        <img src="img/javascript.svg" width="60" height="60" alt="JavaScript" loading="lazy">
+                    </div>
+                    <p class="text-orange-300 font-semibold">JavaScript</p>
+                </div>
+
+                <div class="skill-card h-[135px] w-[135px] rounded-xl backdrop-blur-xl bg-white/15 flex flex-col justify-center items-center gap-3">
+                    <div class="skill-icon h-[60px] w-[60px] flex justify-center items-center">
+                        <i class="ph ph-git-branch" style="font-size:48px;color:#f59e0b;"></i>
+                    </div>
+                    <p class="text-orange-300 font-semibold">Git</p>
+                </div>
+
+                <div class="skill-card h-[135px] w-[135px] rounded-xl backdrop-blur-xl bg-white/15 flex flex-col justify-center items-center gap-3">
+                    <div class="skill-icon h-[60px] w-[60px] flex justify-center items-center">
+                        <i class="ph ph-wind" style="font-size:48px;color:#f59e0b;"></i>
+                    </div>
+                    <p class="text-orange-300 font-semibold">Tailwind</p>
+                </div>
+
+                <div class="skill-card h-[135px] w-[135px] rounded-xl backdrop-blur-xl bg-white/15 flex flex-col justify-center items-center gap-3">
+                    <div class="skill-icon h-[60px] w-[60px] flex justify-center items-center">
+                        <i class="ph ph-figma-logo" style="font-size:48px;color:#f59e0b;"></i>
+                    </div>
+                    <p class="text-orange-300 font-semibold">Figma</p>
+                </div>
+
+                <div class="skill-card h-[135px] w-[135px] rounded-xl backdrop-blur-xl bg-white/15 flex flex-col justify-center items-center gap-3">
+                    <div class="skill-icon h-[60px] w-[60px] flex justify-center items-center">
+                        <i class="ph ph-diamonds-four" style="font-size:48px;color:#f59e0b;"></i>
+                    </div>
+                    <p class="text-orange-300 font-semibold">Node.js</p>
+                </div>
+            </div>
+
+
         </div>
     </section>
 
@@ -225,36 +385,62 @@
 
             <div class="grid md:grid-cols-3 gap-8">
                 <div class="project-card reveal">
-                    <div class="overflow-hidden h-48">
-                        <img class="w-full h-full object-cover" src="img/SOLAR.png" alt="5A Solar Calculator">
-                        <a href="https://5a-solar-calculator.vercel.app/" target="_blank" class="absolute inset-0 w-full h-full"></a>
+                    <div class="overflow-hidden h-48 relative">
+                        <img class="w-full h-full object-cover" src="img/SOLAR.png" alt="5A Solar Calculator" loading="lazy">
+                        <a href="https://5a-solar-calculator.vercel.app/" target="_blank" rel="noopener noreferrer" class="absolute inset-0 w-full h-full group" aria-label="View 5A Solar Calculator project">
+                            <div class="absolute inset-0 bg-orange-600/0 group-hover:bg-orange-600/20 transition-all duration-300 flex items-center justify-center">
+                                <i class="ph ph-arrow-up-right text-white text-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></i>
+                            </div>
+                        </a>
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-bold mb-2">5A Solar Calculator</h3>
                         <p class="text-slate-400 mb-4">A comprehensive tool for calculating solar energy needs and optimizing system design.</p>
+                        <div class="flex flex-wrap gap-2 mb-3">
+                            <span class="proj-tag">React</span>
+                            <span class="proj-tag">Tailwind</span>
+                            <span class="proj-tag">JavaScript</span>
+                        </div>
                         <span class="text-sm text-orange-400/80 font-mono">2026</span>
                     </div>
                 </div>
 
                 <div class="project-card reveal">
-                    <div class="overflow-hidden h-48">
-                        <img class="w-full h-full object-cover" src="img/INVENTORY.png" alt="Inventory Management System">
-                        <a href="https://5-a-inventory-system.vercel.app/login" target="_blank" class="absolute inset-0 w-full h-full"></a>
+                    <div class="overflow-hidden h-48 relative">
+                        <img class="w-full h-full object-cover" src="img/INVENTORY.png" alt="Inventory Management System" loading="lazy">
+                        <a href="https://5-a-inventory-system.vercel.app/login" target="_blank" rel="noopener noreferrer" class="absolute inset-0 w-full h-full group" aria-label="View Inventory Management System project">
+                            <div class="absolute inset-0 bg-orange-600/0 group-hover:bg-orange-600/20 transition-all duration-300 flex items-center justify-center">
+                                <i class="ph ph-arrow-up-right text-white text-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></i>
+                            </div>
+                        </a>
                     </div>
                     <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">5A Inventory Management System</h3>
-                        <p class="text-slate-100 mb-4 font-size-sm">username: admin@a5inc.com password: A5garretadmin123</p>
+                        <h3 class="text-xl font-bold mb-2">5A Inventory Management</h3>
+                        <p class="text-slate-400 mb-4">A full-featured inventory management system for tracking stock, orders, and products.</p>
+                        <div class="flex flex-wrap gap-2 mb-3">
+                            <span class="proj-tag">React</span>
+                            <span class="proj-tag">Node.js</span>
+                            <span class="proj-tag">Database</span>
+                        </div>
                         <span class="text-sm text-orange-400/80 font-mono">2026</span>
                     </div>
                 </div>
 
                 <div class="project-card reveal">
-                    <div class="overflow-hidden h-48">
-                        <img class="w-full h-full object-cover" src="img/game.png" alt="Putok Patrol">
+                    <div class="overflow-hidden h-48 relative">
+                        <img class="w-full h-full object-cover" src="img/game.png" alt="Putok Patrol" loading="lazy">
+                        <div class="absolute inset-0 bg-orange-600/0 group-hover:bg-orange-600/20 transition-all duration-300 flex items-center justify-center">
+                            <i class="ph ph-game-controller text-white text-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></i>
+                        </div>
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-bold mb-2">Putok Patrol</h3>
                         <p class="text-slate-400 mb-4">A competitive game inspired by mini militia and bomb squad, built for strategic entertainment.</p>
+                        <div class="flex flex-wrap gap-2 mb-3">
+                            <span class="proj-tag">Game Dev</span>
+                            <span class="proj-tag">Unity</span>
+                            <span class="proj-tag">C#</span>
+                        </div>
                         <span class="text-sm text-orange-400/80 font-mono">2024</span>
                     </div>
                 </div>
@@ -263,49 +449,65 @@
     </section>
 
     <!-- ================= CONTACT ================= -->
-    <section id="contacts" class="px-6 py-20 max-w-4xl mx-auto">
-        <div class="text-center mb-12 reveal">
-            <p class="text-orange-400 font-semibold tracking-widest uppercase text-sm mb-2">Get in Touch</p>
-            <h1 class="section-heading text-4xl font-extrabold">Contact Me</h1>
-            <p class="text-slate-400 text-lg mt-3 text-white">
-                I'd be delighted to connect. Reach out through any platform below.
-            </p>
-        </div>
+    <section id="contacts" class="px-6 py-20 section-alt">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-12 reveal">
+                <p class="text-orange-400 font-semibold tracking-widest uppercase text-sm mb-2">Get in Touch</p>
+                <h1 class="section-heading text-4xl font-extrabold">Contact Me</h1>
+                <p class="text-slate-400 text-lg mt-3">
+                    I'd be delighted to connect. Reach out through any platform below.
+                </p>
+            </div>
 
-        <div class="flex flex-wrap justify-center gap-6 reveal">
-            <a href="https://www.facebook.com/gartgetget/" target="_blank" class="social-btn glass-card flex items-center gap-3 px-6 py-4 rounded-2xl bg-zinc-900/70">
-                <img src="img/facebook.svg" alt="Facebook" class="w-8 h-8">
-                <span class="font-semibold">Facebook</span>
-            </a>
-            <a href="https://www.linkedin.com/in/garret-jasper-lance-alegre-07b708316/" target="_blank" class="social-btn glass-card flex items-center gap-3 px-6 py-4 rounded-2xl bg-zinc-900/70">
-                <img src="img/lkd.svg" alt="LinkedIn" class="w-8 h-8">
-                <span class="font-semibold">LinkedIn</span>
-            </a>
-            <a href="https://www.instagram.com/garretalegre1111/?hl=en" target="_blank" class="social-btn glass-card flex items-center gap-3 px-6 py-4 rounded-2xl bg-zinc-900/70">
-                <img src="img/ig.svg" alt="Instagram" class="w-8 h-8">
-                <span class="font-semibold">Instagram</span>
-            </a>
-        </div>
+            <div class="flex flex-wrap justify-center gap-6 reveal">
+                <a href="mailto:garretcotoner08@gmail.com" class="social-btn glass-card flex items-center gap-3 px-6 py-4 rounded-2xl bg-zinc-900/70">
+                    <i class="ph ph-envelope text-white" style="font-size:28px;"></i>
+                    <span class="font-semibold">Email</span>
+                </a>
+                <a href="https://www.facebook.com/gartgetget/" target="_blank" rel="noopener noreferrer" class="social-btn glass-card flex items-center gap-3 px-6 py-4 rounded-2xl bg-zinc-900/70">
+                    <img src="img/facebook.svg" alt="Facebook" class="w-8 h-8">
+                    <span class="font-semibold">Facebook</span>
+                </a>
+                <a href="https://www.linkedin.com/in/garret-jasper-lance-alegre-07b708316/" target="_blank" rel="noopener noreferrer" class="social-btn glass-card flex items-center gap-3 px-6 py-4 rounded-2xl bg-zinc-900/70">
+                    <img src="img/lkd.svg" alt="LinkedIn" class="w-8 h-8">
+                    <span class="font-semibold">LinkedIn</span>
+                </a>
+                <a href="https://www.instagram.com/garretalegre1111/?hl=en" target="_blank" rel="noopener noreferrer" class="social-btn glass-card flex items-center gap-3 px-6 py-4 rounded-2xl bg-zinc-900/70">
+                    <img src="img/ig.svg" alt="Instagram" class="w-8 h-8">
+                    <span class="font-semibold">Instagram</span>
+                </a>
+            </div>
 
-        <div class="text-center mt-12 reveal">
-            <p class="text-slate-400 text-lg text-white">
-                Once again, I extend my deepest appreciation for your time and consideration.<br>
-                I look forward to the possibility of collaborating with you in the future. Thank you!
-            </p>
+            <div class="text-center mt-12 reveal">
+                <p class="text-slate-400 text-lg">
+                    Once again, I extend my deepest appreciation for your time and consideration.<br>
+                    I look forward to the possibility of collaborating with you in the future. Thank you!
+                </p>
+            </div>
         </div>
     </section>
 
     <!-- ================= FOOTER ================= -->
-    <footer class="border-t border-white/10 py-8 px-6">
-        <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-white">
-            <p class="text-slate-500 text-sm text-white">© garretcotoner08@gmail.com</p>
-            <div class="flex items-center gap-6 text-sm text-slate-500 text-white">
-                <a href="#about" class="hover:text-orange-400">About</a>
-                <a href="#skills" class="hover:text-orange-400">Skills</a>
-                <a href="#projects" class="hover:text-orange-400">Projects</a>
+    <footer class="border-t border-white/10 py-10 px-6">
+        <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-6">
+            <div class="flex items-center gap-3">
+                <img class="w-8 h-8 rounded-full border border-orange-600 object-cover" src="img/2.png" alt="Avatar">
+                <span class="text-lg font-bold tracking-tight">Gart<span class="text-orange-500">.</span></span>
+            </div>
+            <p class="text-white text-sm">&copy; <span id="footer-year"></span> Garret Jasper Lance Alegre. All rights reserved.</p>
+            <div class="flex items-center gap-5">
+                <a href="https://www.facebook.com/gartgetget/" target="_blank" rel="noopener noreferrer" class="text-white hover:text-orange-400 transition-colors" aria-label="Facebook"><i class="ph ph-facebook-logo" style="font-size:20px;"></i></a>
+                <a href="https://www.linkedin.com/in/garret-jasper-lance-alegre-07b708316/" target="_blank" rel="noopener noreferrer" class="text-white hover:text-orange-400 transition-colors" aria-label="LinkedIn"><i class="ph ph-linkedin-logo" style="font-size:20px;"></i></a>
+                <a href="https://www.instagram.com/garretalegre1111/?hl=en" target="_blank" rel="noopener noreferrer" class="text-white hover:text-orange-400 transition-colors" aria-label="Instagram"><i class="ph ph-instagram-logo" style="font-size:20px;"></i></a>
+                <a href="mailto:garretcotoner08@gmail.com" class="text-white hover:text-orange-400 transition-colors" aria-label="Email"><i class="ph ph-envelope" style="font-size:20px;"></i></a>
             </div>
         </div>
     </footer>
+
+    <!-- ================= BACK TO TOP ================= -->
+    <button id="back-to-top" class="back-to-top-btn" aria-label="Back to top">
+        <i class="ph ph-caret-up" style="font-size:22px;"></i>
+    </button>
 
     <!-- ================= BACKGROUND MOVING ID CARD ================= -->
     <div id="floating-id" aria-hidden="true">
